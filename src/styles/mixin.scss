@@ -1,0 +1,39 @@
+@import 'colors.scss';
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin cardHover {
+  border-color: $primary;
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0 0 1px 4px rgba($primary, 0.4), 0 0 1px 8px rgba($primary, 0.1),
+    0 0 1px 12px rgba($primary, 0.1);
+}
+@mixin buttonHover {
+  cursor: pointer;
+  box-shadow: 0 0 1px 2px rgba($accent, 0.4), 0 0 1px 4px rgba($accent, 0.1),
+    0 0 1px 8px rgba($accent, 0.1);
+}
+
+@mixin sm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
